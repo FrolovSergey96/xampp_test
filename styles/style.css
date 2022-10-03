@@ -18,6 +18,7 @@ header{
 .button_header{                                               /*контейнер для кнопок шапки*/
     font-family: 'Lato', sans-serif;
     height: 38px;
+    text-decoration: none;
 }
 
 .header_main{
@@ -49,6 +50,7 @@ header{
     display: flex;
     align-items: center;
     font-size: 27px;
+    text-decoration: none;
 }
     
 .logopic{                   
@@ -121,13 +123,15 @@ header{
     align-items: center;
     list-style-type: none;             /*сброс стиля отображения списка*/
     margin: 0;
+    padding: 0;
 }
 
 .menu_element{
-     padding: 20px;
-     font-weight: 700;
-     color: #222222;
-     text-decoration: none;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #222222;
+    text-decoration: none;
 }
 
 .promo_main{
@@ -157,7 +161,7 @@ header{
     font-size: 60px;
     margin: 0;
     font-weight: 900;
-    line-height: 69%;                   /*line-height отвечает за высоту текстовой строки, однако она также может создавать нежелательные отступы, в данном случае пришлось повозиться, чтобы выровнять текст относительно левой границы (иначе либо граница будет больше текста, либо наоборот*/  
+    line-height: 41px;                   /*line-height отвечает за высоту текстовой строки, однако она также может создавать нежелательные отступы, в данном случае пришлось повозиться, чтобы выровнять текст относительно левой границы (иначе либо граница будет больше текста, либо наоборот*/  
 }
 
 .promo_font2{
@@ -551,9 +555,11 @@ header{
 }
 
 .path_main{                                                   /*дальше идут классы странички singlepage*/
-    height: 148px;
     background-color: #f8f3f4;
-    margin-bottom: 11px;
+}
+
+.path_group{
+    height: 148px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -575,20 +581,33 @@ header{
     color: #636363;
 }
 
-.product_view{
+.product_group{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 122px;
 }
 
+.product_view{
+    background-color: #f7f7f7;
+    width: 1600px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: -80px;
+}
+
 .product_img{
-    width: 597px;
     height: 724px;
     margin-bottom: 29px;
+    background-color: #f7f7f7;
 }
 
 .product_description{
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    padding: 50px 0px 110px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -818,7 +837,71 @@ header{
     border: 2px solid #555555;
 }
 
-.registration{
+.reg_main{
+    background-color: #f7f7f7;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.reg_group{
+    margin-top: 90px;
+    margin-bottom: 90px;
+    width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    display: flex;
+}
+
+.reg_left{
+    width: 400px;
+    height: 700px;
+    background-image: url(../img/reg_back.png);
+    display: flex;
+    flex-direction: column;
+}
+
+.reg_bannertext{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 54px;
+    margin: 341px 0px 0px 10px;
+    line-height: 93%;
+    text-shadow: 3px 4px 6px black;
+}
+
+.reg_logo{
+    width: 170px;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    margin: 122px 0px 0px 10px;
+}
+    
+.reg_logopic{                   
+    margin-right: 8px;
+}
+
+.reg_logofont{
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+}
+
+.reg_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg_header{
+    font-size: 25px;
+    margin: 46px 0px 26px 0px;
+    
+}
+
+.reg_form{
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -830,5 +913,24 @@ header{
 }
 
 .reg_label{
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 4px;
+}
+
+.reg_input{
+    height: 36px;
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    padding: 0px 5px;               
+}
+
+.reg_button{
+    margin-top: 42px;
+    background-color: #f16d7f;
+    border: 3px solid #f16d7f;
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    padding: 8px 15px;
 }

@@ -5,33 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">       <!-- подключаю шрифт Lato с помощью Google Fonts -->
-    <script src="https://kit.fontawesome.com/5bf98c9127.js" crossorigin="anonymous"></script>                            <!-- подключаю Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5bf98c9127.js" crossorigin="anonymous"></script>
     <title>Главная страница</title>
 </head>
 <body>
     <header>
-        <article class="header_main container">                                                        <!-- объявляю два класса, container регулирует ширину -->
-            <section class="header_left">                                                              <!-- тегом section объявляю элементы внутри "основных" блоков article -->
-                <div class="logo">
+        <article class="header_main container">
+            <section class="header_left">
+                <a href="index.html" class="logo">
                     <img src="img/logo.png" class="logopic">
-                    <h1 class="logofont">BRAN<span class="pink900">D</span></h1>                       <!-- span внутри заголовка, чтобы поменять атрибуты части текста-->
-                </div>                
+                    <h1 class="logofont">BRAN<span class="pink900">D</span></h1>
+                </a>
                 <div class="search_main">
-                    <button class="browse_button button_header">Browse <i class="fa-solid fa-caret-down"></i></button>       <!-- тегом i ставлю символы из font-awesome -->    
-                    <input type="text" class="search_input" placeholder="Search for Item...">                                <!-- placeholder - атрибут для формы, который показывает текст-подсказку -->
+                    <button class="browse_button button_header">Browse <i class="fa-solid fa-caret-down"></i></button>
+                    <input type="text" class="search_input" placeholder="Search for Item...">
                     <button class="search_button button_header"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </section>
-            <section class="header_right">                                                               <!-- поделил заголовок на несколько блоков, чтобы удобнее было распологать их относительно друг друга с помощью flex -->
+            <section class="header_right">
                 <img src="img/cart.png">
-                <button class="pink_button button_header">My account <i class="fa-solid fa-caret-down"></i></button>
-            </section>
+                <a href="registration.html">
+                    <button class="pink_button button_header">My account <i class="fa-solid fa-caret-down"></i></button>
+                </a>
         </article>
     </header>
     <nav>
-        <ul class="menu">                           <!-- ul - маркированный список-->
-            <li><a href="index.html" class="menu_element">HOME</a></li>      <!-- li - элементы списка -->
+        <ul class="menu">
+            <li><a href="index.html" class="menu_element">HOME</a></li>
             <li class="menu_element">MAN</li>
             <li><a href="singlepage.html" class="menu_element">WOMAN</a></li>
             <li class="menu_element">KIDS</li>
@@ -41,20 +42,33 @@
             <li class="menu_element">DEALS</li>
         </ul>
     </nav>
-    <div class="container">
-        <form class="registration" action="form.php" method="post">
-            <label for="fio" class="reg_label">Input your name</label>
-            <input type="text" name="fio" placeholder="Фамилия Имя Отчество">
-            <label for="login" class="reg_label">Input your login</label>
-            <input type="text" name="login" id="" placeholder="Логин">
-            <label for="password" class="reg_label">Input your password</label>
-            <input type="text" name="password" id="" placeholder="Пароль">
-            <label for="email" class="reg_label">Input your e-mail</label>
-            <input type="email" name="email" id="" placeholder="example@example.com">
-            <label for="phone" class="reg_label">Input your phone</label>
-            <input type="tel" name="phone" id="" placeholder="+7(999)999-99-99">     
-            <input type="submit" name="" value="input">
-            </form>
-    </div>
+    <section class="reg_main">
+        <div class="reg_group container">
+            <div class="reg_left">
+                <div class="reg_bannertext">JOIN OUR <span class="pink900">FASHIONABLE</span>  COMMUNITY</div> 
+                <div class="reg_logo">
+                    <img src="img/logo.png" class="reg_logopic">
+                    <h1 class="reg_logofont">BRAN<span class="pink900">D</span></h1>
+                </div>
+            </div>
+            <div class="reg_right">
+                <h1 class="reg_header">SIGN UP</h1>
+                <form class="reg_form" action="form.php" method="post">
+                    <label for="fio" class="reg_label">Input your name</label>
+                    <input type="text" class="reg_input" name="fio" placeholder="John Johnson">
+                    <label for="login" class="reg_label">Input your login</label>
+                    <input type="text" class="reg_input" name="login" placeholder="Login">
+                    <label for="password" class="reg_label">Input your password</label>
+                    <input type="text" class="reg_input" name="password" placeholder="Password">
+                    <label for="email" class="reg_label">Input your e-mail</label>
+                    <input type="email" class="reg_input" name="email" placeholder="example@example.com">
+                    <label for="phone" class="reg_label">Input your phone</label>
+                    <input type="tel" class="reg_input" name="phone" placeholder="+7(999)999-99-99">     
+                    <input type="submit" class="reg_button" name="" value="Submit">
+                </form>
+            </div>
+            
+        </div> 
+    </section>
 </body>
 </html>
